@@ -95,4 +95,3 @@ BSTNodePtr_t insert(TempHumidTreePtr_t tree, DataItem_t info);
 void inorder(TempHumidTreePtr_t tree);
  
 #endif
-

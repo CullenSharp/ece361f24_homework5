@@ -18,7 +18,7 @@
  #include <math.h>
  #include <time.h>
  
- #include "float_rndm.h"
+ #include "../random_float_generator/float_rndm.h"
  #include "iom361_r2.h"
  
  // constants
