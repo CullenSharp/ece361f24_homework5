@@ -10,9 +10,6 @@
 // global variables
 uint32_t* io_base;
 
-// Seed the random number generator
-srand(time(NULL));
-
 // Shuffles an array of dataItems
 static void shuffle(DataItemPtr_t readings) {
     DataItem_t temp;
@@ -27,7 +24,16 @@ static void shuffle(DataItemPtr_t readings) {
 
 int main() {
     int rtn_code;
-    iom361_initialize(io_base, 16, 16, &rtn_code);
+    // Init iom
+    io_base = iom361_initialize(16,16,&rtn_code);
+    if (rtn_code != 0) {
+        printf("FATAL(main): Could not initialize I/O module\n");
+		return 1;
+	}
+	printf("\n");
+
+    // Seed random number generator
+    srand(time(NULL));
 
     // greet the user and display the working directory for the application
     printf("ECE 361 - temp and humidity tree (cts6@pdx.edu)\n");
@@ -55,7 +61,7 @@ int main() {
 }
 
 
-populateBST(TempHumidTreePtr_t tree) {
+void populateBST(TempHumidTreePtr_t tree) {
     DataItem_t readings[DAYS];
     time_t date = 1730473635; // == nov 1 2024 8:07:15
 
