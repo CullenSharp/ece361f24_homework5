@@ -1,0 +1,163 @@
+--------------------------------------------
+NOTE:  This was the BST for the test case
+
+				10/29
+	 10/27					  11/2	   
+ 10/26   10/28 		  10/30           11/5
+                           11/1  11/3       11/6
+						10/31        11/4
+						          
+--------------------------------------------
+
+[roykr.DESKTOP-UAMUI66] ➤ whoami; pwd
+roykr
+/drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+
+[2023-11-21 10:41.11]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+[roykr.DESKTOP-UAMUI66] ➤ gcc -Wall -std=c99 -c tempHumidtree.c
+
+[2023-11-21 10:41.21]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+[roykr.DESKTOP-UAMUI66] ➤ gcc -Wall -std=c99 -o test_tempHumidtree.exe test_tempHumidtree.c *.o
+
+[2023-11-21 10:41.26]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+[roykr.DESKTOP-UAMUI66] ➤ ./test_tempHumidtree
+ECE 361 - Test BST ADT for Homework #5 (roy.kravitz@pdx.edu)
+Current working directory: /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+
+INFO(main()): Initialize iom361
+  ____  ____  ____  ____
+RedDC= 0% (  0), GrnDC= 0% (  0), BluDC= 0% (  0)       Enable=OFF
+
+INFO(main()): added data[3] to BST
+INFO(main()): added data[7] to BST
+INFO(main()): added data[10] to BST
+INFO(main()): added data[11] to BST
+INFO(main()): added data[4] to BST
+INFO(main()): added data[8] to BST
+INFO(main()): added data[6] to BST
+INFO(main()): added data[1] to BST
+INFO(main()): added data[5] to BST
+INFO(main()): added data[9] to BST
+INFO(main()): added data[2] to BST
+INFO(main()): added data[0] to BST
+
+Searching BST for all timestamps...plus a few others
+INFO(search()): Starting search for timestamp 1698350400
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698436800] Fri Oct 27 13:00:00 2023
+FOUND-> Thu Oct 26 13:00:00 2023
+
+Found data for Timestamp 26-Oct-2023
+INFO(search()): Starting search for timestamp 1698436800
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+FOUND-> Fri Oct 27 13:00:00 2023
+
+Found data for Timestamp 27-Oct-2023
+INFO(search()): Starting search for timestamp 1698523200
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698436800] Fri Oct 27 13:00:00 2023
+FOUND-> Sat Oct 28 13:00:00 2023
+
+Found data for Timestamp 28-Oct-2023
+INFO(search()): Starting search for timestamp 1698609600
+INFO(search()): Visiting these nodes:
+FOUND-> Sun Oct 29 13:00:00 2023
+
+Found data for Timestamp 29-Oct-2023
+INFO(search()): Starting search for timestamp 1698696000
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+FOUND-> Mon Oct 30 13:00:00 2023
+
+Found data for Timestamp 30-Oct-2023
+INFO(search()): Starting search for timestamp 1698782400
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+-> [1698696000] Mon Oct 30 13:00:00 2023
+-> [1698868800] Wed Nov  1 13:00:00 2023
+FOUND-> Tue Oct 31 13:00:00 2023
+
+Found data for Timestamp 31-Oct-2023
+INFO(search()): Starting search for timestamp 1698868800
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+-> [1698696000] Mon Oct 30 13:00:00 2023
+FOUND-> Wed Nov  1 13:00:00 2023
+
+Found data for Timestamp 01-Nov-2023
+INFO(search()): Starting search for timestamp 1698955200
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+FOUND-> Thu Nov  2 13:00:00 2023
+
+Found data for Timestamp 02-Nov-2023
+INFO(search()): Starting search for timestamp 1699041600
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+-> [1699214400] Sun Nov  5 12:00:00 2023
+FOUND-> Fri Nov  3 13:00:00 2023
+
+Found data for Timestamp 03-Nov-2023
+INFO(search()): Starting search for timestamp 1699128000
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+-> [1699214400] Sun Nov  5 12:00:00 2023
+-> [1699041600] Fri Nov  3 13:00:00 2023
+FOUND-> Sat Nov  4 13:00:00 2023
+
+Found data for Timestamp 04-Nov-2023
+INFO(search()): Starting search for timestamp 1699214400
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+FOUND-> Sun Nov  5 12:00:00 2023
+
+Found data for Timestamp 05-Nov-2023
+INFO(search()): Starting search for timestamp 1699300800
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+-> [1699214400] Sun Nov  5 12:00:00 2023
+FOUND-> Mon Nov  6 12:00:00 2023
+
+Found data for Timestamp 06-Nov-2023
+INFO(search()): Starting search for timestamp 1699387200
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+-> [1699214400] Sun Nov  5 12:00:00 2023
+-> [1699300800] Mon Nov  6 12:00:00 2023
+Did not find data for Timestamp 07-Nov-2023
+INFO(search()): Starting search for timestamp 1699473600
+INFO(search()): Visiting these nodes:
+-> [1698609600] Sun Oct 29 13:00:00 2023
+-> [1698955200] Thu Nov  2 13:00:00 2023
+-> [1699214400] Sun Nov  5 12:00:00 2023
+-> [1699300800] Mon Nov  6 12:00:00 2023
+Did not find data for Timestamp 08-Nov-2023
+
+Temperature/Humidity table:
+---------------------------
+26-Oct-2023     49.5C(0007F62C) 81.2%(000CFE43)
+27-Oct-2023     51.8C(00082489) 77.5%(000C6763)
+28-Oct-2023     44.8C(00079496) 85.6%(000DB372)
+29-Oct-2023     46.1C(0007AF2E) 84.7%(000D8E24)
+30-Oct-2023     43.6C(00077D17) 73.8%(000BCD1C)
+31-Oct-2023     49.5C(0007F5FB) 79.1%(000CA8B0)
+01-Nov-2023     44.2C(00078A30) 80.3%(000CDB00)
+02-Nov-2023     49.0C(0007EB95) 84.9%(000D9669)
+03-Nov-2023     48.3C(0007DE23) 74.2%(000BE008)
+04-Nov-2023     45.4C(0007A124) 80.3%(000CDA24)
+05-Nov-2023     49.4C(0007F411) 84.7%(000D8EDA)
+06-Nov-2023     48.0C(0007D6E8) 77.6%(000C6A4B)
+
+BST ADT test complete
+[2023-11-21 10:41.31] 

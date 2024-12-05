@@ -1,0 +1,157 @@
+[2023-11-27 16:46.39]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+[roykr.DESKTOP-UAMUI66] ➤ whoami; pwd
+roykr
+/drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+
+[2023-11-27 16:46.45]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+[roykr.DESKTOP-UAMUI66] ➤ ls
+Makefile                  float_rndm.c              hw5_app.c                 iom361_r2.c               tempHumidtree.c           test_tempHumidtree.c
+avg_temp_humid.h          float_rndm.h              hw5_app_test_results.txt  iom361_r2.h               tempHumidtree.h
+
+[2023-11-27 16:46.51]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+[roykr.DESKTOP-UAMUI66] ➤ make
+gcc -Wall -std=c99 -g -c float_rndm.c
+gcc -Wall -std=c99 -g -c iom361_r2.c
+gcc -Wall -std=c99 -g -c tempHumidtree.c
+gcc -Wall -std=c99 -g -c hw5_app.c
+gcc -o hw5_app float_rndm.o iom361_r2.o tempHumidtree.o hw5_app.o
+
+[2023-11-27 16:46.57]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+[roykr.DESKTOP-UAMUI66] ➤ ls
+Makefile                  float_rndm.h              hw5_app.exe               iom361_r2.c               tempHumidtree.c           test_tempHumidtree.c
+avg_temp_humid.h          float_rndm.o              hw5_app.o                 iom361_r2.h               tempHumidtree.h
+float_rndm.c              hw5_app.c                 hw5_app_test_results.txt  iom361_r2.o               tempHumidtree.o
+
+[2023-11-27 16:47.01]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+[roykr.DESKTOP-UAMUI66] ➤ ./hw5_app
+ECE 361 - Homework #5 application (roy.kravitz@pdx.edu)
+Current working directory: /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+
+INFO(main()): Initialize iom361
+  ____  ____  ____  ____
+RedDC= 0% (  0), GrnDC= 0% (  0), BluDC= 0% (  0)       Enable=OFF
+
+Enter the starting month (1 to 12),day (1 to 31), and number of days (1 to 100): 8,1,30
+User requested 30 data items starting at  8/ 1/2023
+INFO(main()): added timestamp 1691956800 from data[12] to BST
+INFO(main()): added timestamp 1692820800 from data[22] to BST
+INFO(main()): added timestamp 1691265600 from data[4] to BST
+INFO(main()): added timestamp 1691352000 from data[5] to BST
+INFO(main()): added timestamp 1693080000 from data[25] to BST
+INFO(main()): added timestamp 1692561600 from data[19] to BST
+INFO(main()): added timestamp 1692734400 from data[21] to BST
+INFO(main()): added timestamp 1692648000 from data[20] to BST
+INFO(main()): added timestamp 1691611200 from data[8] to BST
+INFO(main()): added timestamp 1693252800 from data[27] to BST
+INFO(main()): added timestamp 1690920000 from data[0] to BST
+INFO(main()): added timestamp 1692475200 from data[18] to BST
+INFO(main()): added timestamp 1692907200 from data[23] to BST
+INFO(main()): added timestamp 1693166400 from data[26] to BST
+INFO(main()): added timestamp 1692216000 from data[15] to BST
+INFO(main()): added timestamp 1692129600 from data[14] to BST
+INFO(main()): added timestamp 1691784000 from data[10] to BST
+INFO(main()): added timestamp 1691179200 from data[3] to BST
+INFO(main()): added timestamp 1691524800 from data[7] to BST
+INFO(main()): added timestamp 1693425600 from data[29] to BST
+INFO(main()): added timestamp 1692043200 from data[13] to BST
+INFO(main()): added timestamp 1691870400 from data[11] to BST
+INFO(main()): added timestamp 1691697600 from data[9] to BST
+INFO(main()): added timestamp 1691006400 from data[1] to BST
+INFO(main()): added timestamp 1691092800 from data[2] to BST
+INFO(main()): added timestamp 1693339200 from data[28] to BST
+INFO(main()): added timestamp 1692302400 from data[16] to BST
+INFO(main()): added timestamp 1692388800 from data[17] to BST
+INFO(main()): added timestamp 1691438400 from data[6] to BST
+INFO(main()): added timestamp 1692993600 from data[24] to BST
+
+Enter a search date (mm/dd/yyyy): 7/31/2023
+INFO(search()): Starting search for timestamp 1690833600
+INFO(search()): Visiting these nodes:
+-> [1691956800] Sun Aug 13 13:00:00 2023
+-> [1691265600] Sat Aug  5 13:00:00 2023
+-> [1690920000] Tue Aug  1 13:00:00 2023
+Did not find data for Timestamp 31-Jul-2023
+Enter a search date (mm/dd/yyyy): 8/1/2023
+INFO(search()): Starting search for timestamp 1690920000
+INFO(search()): Visiting these nodes:
+-> [1691956800] Sun Aug 13 13:00:00 2023
+-> [1691265600] Sat Aug  5 13:00:00 2023
+FOUND-> Tue Aug  1 13:00:00 2023
+
+Found data for Timestamp 01-Aug-2023
+01-Aug-2023     71.2F(0005BE7D) 57.6%(00093689)
+Enter a search date (mm/dd/yyyy): 8/15/2023
+INFO(search()): Starting search for timestamp 1692129600
+INFO(search()): Visiting these nodes:
+-> [1691956800] Sun Aug 13 13:00:00 2023
+-> [1692820800] Wed Aug 23 13:00:00 2023
+-> [1692561600] Sun Aug 20 13:00:00 2023
+-> [1692475200] Sat Aug 19 13:00:00 2023
+-> [1692216000] Wed Aug 16 13:00:00 2023
+FOUND-> Tue Aug 15 13:00:00 2023
+
+Found data for Timestamp 15-Aug-2023
+15-Aug-2023     72.5F(0005CCD8) 52.6%(00086A72)
+Enter a search date (mm/dd/yyyy): 9/1/2023
+INFO(search()): Starting search for timestamp 1693598400
+INFO(search()): Visiting these nodes:
+-> [1691956800] Sun Aug 13 13:00:00 2023
+-> [1692820800] Wed Aug 23 13:00:00 2023
+-> [1693080000] Sat Aug 26 13:00:00 2023
+-> [1693252800] Mon Aug 28 13:00:00 2023
+-> [1693425600] Wed Aug 30 13:00:00 2023
+Did not find data for Timestamp 01-Sep-2023
+Enter a search date (mm/dd/yyyy):
+INFO(main()):  End search for data items in BST
+
+Temperature/Humidity table:
+---------------------------
+01-Aug-2023     71.2F(0005BE7D) 57.6%(00093689)
+02-Aug-2023     77.1F(00060155) 73.0%(000BAD3A)
+03-Aug-2023     69.5F(0005AB09) 64.2%(000A4735)
+04-Aug-2023     70.0F(0005B0A1) 52.3%(00085F21)
+05-Aug-2023     80.4F(00062692) 78.9%(000CA07E)
+06-Aug-2023     66.0F(000582F5) 81.0%(000CF47A)
+07-Aug-2023     58.4F(00052BE9) 47.7%(0007A381)
+08-Aug-2023     67.3F(00059222) 61.9%(0009E8B0)
+09-Aug-2023     65.7F(00057F4A) 53.0%(00087ABF)
+10-Aug-2023     78.4F(00061036) 44.7%(0007253A)
+11-Aug-2023     65.3F(00057AB3) 58.9%(00096D41)
+12-Aug-2023     65.2F(000579AC) 60.9%(0009C06A)
+13-Aug-2023     75.5F(0005EE7D) 66.5%(000AA3B6)
+14-Aug-2023     72.1F(0005C839) 61.5%(0009D67A)
+15-Aug-2023     72.5F(0005CCD8) 52.6%(00086A72)
+16-Aug-2023     64.8F(000574C8) 81.6%(000D0EDF)
+17-Aug-2023     77.8F(000608C8) 75.0%(000C000A)
+18-Aug-2023     61.1F(00054A91) 50.5%(000812D0)
+19-Aug-2023     68.4F(00059E37) 81.4%(000D048D)
+20-Aug-2023     59.4F(000537AB) 52.4%(000862CB)
+21-Aug-2023     62.4F(00055A0A) 77.1%(000C56CE)
+22-Aug-2023     77.0F(0005FFBF) 72.0%(000B8521)
+23-Aug-2023     82.7F(000640DD) 69.5%(000B2057)
+24-Aug-2023     82.0F(000638C0) 55.4%(0008DBAF)
+25-Aug-2023     81.6F(00063451) 62.3%(0009F683)
+26-Aug-2023     82.5F(00063E9C) 56.7%(00091205)
+27-Aug-2023     73.6F(0005D8EE) 53.4%(00088C1D)
+28-Aug-2023     81.5F(00063359) 71.0%(000B5B7D)
+29-Aug-2023     79.8F(00061F53) 58.8%(00096A76)
+30-Aug-2023     61.5F(00054FB1) 67.9%(000ADE46)
+
+Thanks for runnng Roy's HW #5 app
+
+[2023-11-27 16:49.54]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+[roykr.DESKTOP-UAMUI66] ➤ ls
+Makefile                  float_rndm.h              hw5_app.exe               iom361_r2.c               tempHumidtree.c           test_tempHumidtree.c
+avg_temp_humid.h          float_rndm.o              hw5_app.o                 iom361_r2.h               tempHumidtree.h
+float_rndm.c              hw5_app.c                 hw5_app_test_results.txt  iom361_r2.o               tempHumidtree.o
+
+[2023-11-27 16:50.33]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+[roykr.DESKTOP-UAMUI66] ➤ make clean
+rm  float_rndm.o iom361_r2.o tempHumidtree.o hw5_app.o *.exe
+
+[2023-11-27 16:50.36]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app
+[roykr.DESKTOP-UAMUI66] ➤ ls
+Makefile                  float_rndm.c              hw5_app.c                 iom361_r2.c               tempHumidtree.c           test_tempHumidtree.c
+avg_temp_humid.h          float_rndm.h              hw5_app_test_results.txt  iom361_r2.h               tempHumidtree.h
+
+[2023-11-27 16:50.41]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/homework-5-profroyk/hw5_app

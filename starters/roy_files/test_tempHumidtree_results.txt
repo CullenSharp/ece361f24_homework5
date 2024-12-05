@@ -1,0 +1,110 @@
+--------------------------------------------
+NOTE:  This was the BST for the test case
+
+        11-2
+		/   \
+	  11-1  11-5
+	        / 
+	      11-4
+		   /
+		 11-3
+--------------------------------------------
+[2023-11-20 23:13.39]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+[roykr.DESKTOP-UAMUI66] ➤ whoami; pwd
+roykr
+/drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+
+[2023-11-20 23:13.51]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+[roykr.DESKTOP-UAMUI66] ➤ gcc -Wall -std=c99 -c tempHumidtree.c
+
+[2023-11-20 23:14.23]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+[roykr.DESKTOP-UAMUI66] ➤ gcc -Wall -std=c99 -o test_tempHumidtree.exe test_tempHumidtree.c *.o
+
+[2023-11-20 23:14.37]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+[roykr.DESKTOP-UAMUI66] ➤ ./test_tempHumidtree
+ECE 361 - Test BST ADT for Homework #5 (roy.kravitz@pdx.edu)
+Current working directory: /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
+
+INFO(main()): Initialize iom361
+  ____  ____  ____  ____
+RedDC= 0% (  0), GrnDC= 0% (  0), BluDC= 0% (  0)       Enable=OFF
+
+INFO(createTempHumidTree()): Successfully created a Temp/Humidity tree
+INFO(insert()): Tree is empty...inserting root node
+INFO(main()): added data[1] to BST
+INFO(insert(): Tree is populated...looking for insertion point
+INFO(main()): added data[0] to BST
+INFO(insert(): Tree is populated...looking for insertion point
+INFO(main()): added data[4] to BST
+INFO(insert(): Tree is populated...looking for insertion point
+INFO(main()): added data[3] to BST
+INFO(insert(): Tree is populated...looking for insertion point
+INFO(main()): added data[2] to BST
+INFO(search()): Starting search for timestamp
+INFO(search()): Visiting these nodes:
+-> Thu Nov  2 13:00:00 2023
+
+
+Found data for Timestamp Wed Nov  1 13:00:00 2023
+
+INFO(search()): Starting search for timestamp
+INFO(search()): Visiting these nodes:
+
+Found data for Timestamp Thu Nov  2 13:00:00 2023
+
+INFO(search()): Starting search for timestamp
+INFO(search()): Visiting these nodes:
+-> Thu Nov  2 13:00:00 2023
+
+-> Sun Nov  5 12:00:00 2023
+
+-> Sat Nov  4 13:00:00 2023
+
+
+Found data for Timestamp Fri Nov  3 13:00:00 2023
+
+INFO(search()): Starting search for timestamp
+INFO(search()): Visiting these nodes:
+-> Thu Nov  2 13:00:00 2023
+
+-> Sun Nov  5 12:00:00 2023
+
+
+Found data for Timestamp Sat Nov  4 13:00:00 2023
+
+INFO(search()): Starting search for timestamp
+INFO(search()): Visiting these nodes:
+-> Thu Nov  2 13:00:00 2023
+
+
+Found data for Timestamp Sun Nov  5 12:00:00 2023
+
+INFO(search()): Starting search for timestamp
+INFO(search()): Visiting these nodes:
+-> Thu Nov  2 13:00:00 2023
+
+-> Sun Nov  5 12:00:00 2023
+
+Did not find data for Timestamp Mon Nov  6 12:00:00 2023
+
+INFO(search()): Starting search for timestamp
+INFO(search()): Visiting these nodes:
+-> Thu Nov  2 13:00:00 2023
+
+-> Sun Nov  5 12:00:00 2023
+
+Did not find data for Timestamp Tue Nov  7 12:00:00 2023
+
+
+Temperature/Humidity table:
+---------------------------
+INFO(inorder()): There are 5 nodes on the BST
+01-Nov-2023     51.4C(00081BBA) 84.1%(000D7694)
+02-Nov-2023     51.6C(0008219A) 85.9%(000DBF56)
+03-Nov-2023     44.2C(00078886) 75.6%(000C1806)
+04-Nov-2023     46.9C(0007C0A0) 78.7%(000C9875)
+05-Nov-2023     47.9C(0007D601) 86.1%(000DC87B)
+
+BST ADT test complete
+
+[2023-11-20 23:14.43]  /drives/c/Users/roykr/psuproj/ece361f23/hw5/prob1
