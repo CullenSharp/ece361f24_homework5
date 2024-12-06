@@ -24,6 +24,8 @@ static void shuffle(DataItemPtr_t readings) {
 
 int main() {
     int rtn_code;
+    TempHumidTreePtr_t tree = createTempHumidTree();
+
     // Init iom
     io_base = iom361_initialize(16,16,&rtn_code);
     if (rtn_code != 0) {
@@ -50,20 +52,23 @@ int main() {
     }
     printf("\n");
 
-    // Init iom
-    io_base = iom361_initialize(16, 16, &rtn_code);
-    if (rtn_code != 0) {
-        printf("FATAL(main): Could not initialize I/O module\n");
-		return 1;
-	}
-	printf("\n");
+    populateBST(tree);
+    inorder(tree);
+    destroy(tree);
     return 0;
 }
 
 
 void populateBST(TempHumidTreePtr_t tree) {
     DataItem_t readings[DAYS];
-    time_t date = 1730473635; // == nov 1 2024 8:07:15
+    struct tm time_str;
+    time_str.tm_year = 2024 - 1900;
+    time_str.tm_mon = 11 - 1;
+    time_str.tm_mday = 1;
+    time_str.tm_hour = 0;
+    time_str.tm_min = 0;
+    time_str.tm_sec = 1;
+    time_str.tm_isdst = -1;
 
     if (io_base == NULL) {
         printf("ERROR: populateBST: base address does not exist.\n");
@@ -80,7 +85,8 @@ void populateBST(TempHumidTreePtr_t tree) {
         uint32_t temp_reg_val, humid_reg_val;
         _iom361_setSensor1_rndm(TEMP_RANGE_LOW, TEMP_RANGE_HI, HUMID_RANGE_LOW, HUMID_RANGE_HI);
 
-        readings[day].timestamp = date;
+        readings[day].timestamp = mktime(&time_str);
+        time_str.tm_mday++;
 
         temp_reg_val = iom361_readReg(io_base, TEMP_REG, NULL);
         readings[day].temp = (temp_reg_val/ powf(2,20)) * 200.0 - 50;
