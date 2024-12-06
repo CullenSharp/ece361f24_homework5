@@ -1,3 +1,13 @@
+/**
+ * @file main.c
+ * @brief 
+ * The source file for the main application of ece361 hw5
+ *
+ * @version:	1.0.0
+ * @author:		Cullen Sharp (cts6@pdx.edu)
+ * @date: 		5-Dec-2024
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>

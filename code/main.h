@@ -1,3 +1,12 @@
+/**
+ * @file main.h
+ * @brief 
+ * The header file for the main application of ece361 hw5
+ *
+ * @version:	1.0.0
+ * @author:		Cullen Sharp (cts6@pdx.edu)
+ * @date: 		5-Dec-2024
+ */
 #include <stdint.h>
 #include "lib/temp_humid_tree/temp_humid_tree.h"
 
