@@ -1,3 +1,16 @@
+/**
+ * @file temp_humid_tree.c
+ * @brief 
+ * This is source file for a binary search tree ADT targeted to the
+ * Temp/Humidity BST from ECE 361 HW #5
+ *
+ * @version:	1.0.1	
+ * @author:		Cullen Sharp (cts6@pdx.edu)
+ * @date: 		5-Dec-2024
+ *
+ * @note code is based on the BinarySearchTree example used during
+ * the ECE 361 lectures which is based on Karumanchi's example code
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -62,6 +75,7 @@ BSTNodePtr_t insert(TempHumidTreePtr_t tree, DataItem_t info) {
     tempNode->left = NULL;
     tempNode->right = NULL;
 
+    // If empty, put at root
     if (tree->root == NULL) {
         tree->root = tempNode;
         return tempNode;
@@ -72,6 +86,7 @@ BSTNodePtr_t insert(TempHumidTreePtr_t tree, DataItem_t info) {
         while(1) {
             parent = current;
 
+            // If less than, go left
             if (tempNode->data.timestamp < parent->data.timestamp) {
                 current = current->left;
 
@@ -91,6 +106,14 @@ BSTNodePtr_t insert(TempHumidTreePtr_t tree, DataItem_t info) {
 }
 
 BSTNodePtr_t search(TempHumidTreePtr_t tree, time_t timestamp) {
+    char date_time_buf[32];
+    struct tm *date_time_str;
+    date_time_str = gmtime(&timestamp);
+    strftime(date_time_buf,
+             sizeof(date_time_buf),
+             "%a %b %_d %T %Y",
+             date_time_str);
+
     if (tree == NULL) {
         printf("ERROR: temp_humid_tree(search): tree does not exist\n");
         return NULL;
@@ -107,10 +130,12 @@ BSTNodePtr_t search(TempHumidTreePtr_t tree, time_t timestamp) {
         }
 
         if (current == NULL) {
+            printf("Did not find data for timestamp %s\n", date_time_buf);
             return NULL;
         }
     }
 
+    printf("FOUND! %s\n", date_time_buf);
     return current;
 }
 

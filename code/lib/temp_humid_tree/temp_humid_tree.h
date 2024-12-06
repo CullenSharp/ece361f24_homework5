@@ -1,12 +1,12 @@
 /**
- * @file tempHumidtree.h
+ * @file temp_humid_tree.h
  * @brief 
  * This is header file for a binary search tree ADT targeted to the
  * Temp/Humidity BST from ECE 361 HW #5
  *
- * @version:	1.0.0	
- * @author:		Roy Kravitz (roy.kravitz@pdx.edu)
- * @date: 		18-Nov-2023
+ * @version:	1.0.1	
+ * @author:		Cullen Sharp (cts6@pdx.edu)
+ * @date: 		5-Dec-2024
  *
  * @note code is based on the BinarySearchTree example used during
  * the ECE 361 lectures which is based on Karumanchi's example code
@@ -98,7 +98,10 @@ void inorder(TempHumidTreePtr_t tree);
 /**
  * destory() free the instance
  * 
- * @param tree point to the TempHumidTree
+ * @param 	tree 		pointer to the TempHumidtree to add the node to
+ * 
+ * @brief
+ * Frees tree nodes inorder
  */
 void destroy(TempHumidTreePtr_t tree);
 
