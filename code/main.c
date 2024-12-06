@@ -60,7 +60,7 @@ int main() {
 
     while(1) {
         i = 0;
-        printf("Enter timestamp: ");
+        printf("Enter timestamp (mm/dd/yyyy hh:mm:ss): ");
         while ((ch = getchar()) != '\n')
             date_time_buf[i++] = ch;
 
@@ -79,7 +79,7 @@ int main() {
         date_time_str.tm_hour = hour - 7;
         date_time_str.tm_min = mins;
         date_time_str.tm_sec = secs;
-        date_time_str.tm_isdst = -1;
+        date_time_str.tm_isdst = 1;
         search(tree, mktime(&date_time_str));
     }
 
@@ -101,7 +101,7 @@ void populateBST(TempHumidTreePtr_t tree) {
     time_str.tm_hour = 0;
     time_str.tm_min = 0;
     time_str.tm_sec = 1;
-    time_str.tm_isdst = -1;
+    time_str.tm_isdst = 1;
 
     if (io_base == NULL) {
         printf("ERROR: populateBST: base address does not exist.\n");
