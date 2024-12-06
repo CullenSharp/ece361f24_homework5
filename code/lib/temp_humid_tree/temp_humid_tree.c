@@ -136,6 +136,19 @@ BSTNodePtr_t search(TempHumidTreePtr_t tree, time_t timestamp) {
     }
 
     printf("FOUND! %s\n", date_time_buf);
+    date_time_str = gmtime(&current->data.timestamp);
+    strftime(date_time_buf,
+             sizeof(date_time_buf),
+             "%a %b %_d %T %Y",
+             date_time_str);
+    
+    printf("+---------------------------------------------+\n");
+    printf("| Date                     | Temp  | Humidity |\n");
+    printf("+---------------------------------------------+\n");
+    printf("| %s | %3.1fC | %3.1f%%    |\n",
+        date_time_buf, current->data.temp, current->data.humid); 
+    printf("+---------------------------------------------+\n\n");
+
     return current;
 }
 
