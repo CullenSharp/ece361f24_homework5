@@ -12,8 +12,8 @@
  * the ECE 361 lectures which is based on Karumanchi's example code
  */
  
- #ifndef _TEMPHUMIDTREE_H
- #define _TEMPHUMIDTREE_H
+ #ifndef _TEMP_HUMID_TREE_H
+ #define _TEMP_HUMID_TREE_H
  
  #include <stdbool.h>
  #include <stdint.h>
@@ -27,8 +27,8 @@
 // define data item struct
 typedef struct _temp_humid_data_s  {
 		time_t		timestamp;
-		uint32_t	temp;
-		uint32_t	humid;
+		float		temp;
+		float 		humid;
 } DataItem_t, *DataItemPtr_t;
 
 // define the binary search tree node
@@ -93,5 +93,13 @@ BSTNodePtr_t insert(TempHumidTreePtr_t tree, DataItem_t info);
  * is a wrapper for _inorder() (non-AIPI) which does the work.
  */ 
 void inorder(TempHumidTreePtr_t tree);
- 
+
+
+/**
+ * destory() free the instance
+ * 
+ * @param tree point to the TempHumidTree
+ */
+void destroy(TempHumidTreePtr_t tree);
+
 #endif
